@@ -61,11 +61,11 @@ src/
 
 ## 🔗 Sample Endpoints
 
-```http
+http
 GET     /api/doctors
 POST    /api/patients
 PUT     /api/appointments/{id}
-DELETE  /api/billings/{id} ```
+DELETE  /api/billings/{id}
 
 Each Resource class corresponds to one entity and supports HTTP methods like GET, POST, PUT, DELETE.
 
