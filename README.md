@@ -6,18 +6,17 @@
 
 HealthSystem is a modular **Java EE 8** web service designed to manage healthcare-related data through a RESTful API. The application follows a layered architecture and leverages **JAX-RS**, **JPA 2.2**, and **WAR deployment structure** to simulate a real-world healthcare backend.
 
-
 ---
 
 ## 🌐 Overview
 
 This project simulates the backend for a hospital management system, supporting:
 
-- 📋 Appointments
-- 💳 Billing
-- 👨‍⚕️ Doctor management
-- 🧾 Medical records
-- 🧍 Patient registration
+- 📋 Appointments  
+- 💳 Billing  
+- 👨‍⚕️ Doctor management  
+- 🧾 Medical records  
+- 🧍 Patient registration  
 - 💊 Prescription tracking
 
 Each module supports full **CRUD operations** via dedicated REST endpoints.
@@ -40,8 +39,8 @@ src/
 
 ### 📦 Packages
 
-| Package                | Description                              |
-|------------------------|------------------------------------------|
+| Package               | Description                              |
+|-----------------------|------------------------------------------|
 | `dao`                 | Data Access Objects (JPA)                |
 | `model`               | Entities representing business objects   |
 | `resource`            | RESTful API endpoints                    |
@@ -63,48 +62,45 @@ src/
 ## 🔗 Sample Endpoints
 
 ```http
-GET    /api/doctors
-POST   /api/patients
-PUT    /api/appointments/{id}
-DELETE /api/billings/{id}
+GET     /api/doctors
+POST    /api/patients
+PUT     /api/appointments/{id}
+DELETE  /api/billings/{id} ```
 
 Each Resource class corresponds to one entity and supports HTTP methods like GET, POST, PUT, DELETE.
 
----
 ⚙️ Setup & Deployment
 
-Clone the repository: git clone https://github.com/leandrofelixdev/healthsystem.git
+# Clone the repository
+git clone https://github.com/leandrofelixdev/healthsystem.git
 
 Import as a Maven project in an IDE (e.g., IntelliJ, Eclipse)
 
-Ensure your persistence.xml points to your desired database: 
-<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/healthdb" />
+Ensure your persistence.xml points to your desired database: <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/healthdb" />
 
-Build and deploy to a Java EE-compatible server (e.g., Payara, WildFly, or TomEE)
+Build and deploy to a Java EE-compatible server (e.g., Payara, WildFly, TomEE)
 
 Test endpoints using Postman or cURL
 
-📋 Example Entity: Patient.java
-
+📋 Example Entity
 @Entity
 public class Patient {
     @Id
     private String patientId;
     private String name;
     private String contactInfo;
-    ...
 }
+
 🧪 Testing
-Unit-tested DAO layers using local database
+✅ Unit-tested DAO layers using local database
 
-Endpoints validated via Postman
+✅ Endpoints validated via Postman
 
-Data persisted through JPA to relational DB
+✅ Data persisted through JPA to relational DB
 
 📝 Notes
-This project was part of the Enterprise Computing module.
-
-You may configure cross-entity relationships using @OneToMany, @ManyToOne if needed.
+This project was developed as part of the Client-Server Architectures module.
+You may configure cross-entity relationships using @OneToMany, @ManyToOne, etc., as needed.
 
 📜 License
 Shared for educational and portfolio purposes only.
